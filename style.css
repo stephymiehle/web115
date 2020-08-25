@@ -37,6 +37,17 @@ footer p {
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 }
 
+a {
+  color: #4b8434;
+  transition: color 0.1s ease-in-out;
+  text-decoration-line: none;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: #247c86;
+}
+
 /* Header */
 
 header {
@@ -51,9 +62,44 @@ header {
 main {
   background-color: #fff;
   border-radius: 20px;
-  padding: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  display: flex;
+}
+
+.assignment-column {
+  flex: 1;
+  padding: 2rem;
+}
+
+.assignment-column ul,
+.assignment-column li {
+  margin: 0;
+  padding: 0;
+}
+
+.assignment-column li {
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.assignment-column li:nth-of-type(n + 2) {
+  border-top: 1px solid #eee;
+  padding-top: 0.5em;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  .assignment-column {
+    flex-basis: 100%;
+  }
+
+  .assignment-column:nth-of-type(n + 2) {
+    border-top: 1px solid #eee;
+  }
 }
 
 /* Footer */
