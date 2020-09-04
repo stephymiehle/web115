@@ -225,6 +225,9 @@ Google Fonts
 
 /* -----------------------------------------------------------------------------
 CSS Variables
+Each <path> in the <svg> is styled with "fill" to change the color. Example...
+fill: mediumseagreen;
+...but assign and use variables instead!
 ----------------------------------------------------------------------------- */
 
 .css-variables .illustration {
