@@ -1,0 +1,129 @@
+/* -----------------------------------------------------------------------------
+PAGE SETUP
+----------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-radius: 5px;
+  --olive: #9ca77b;
+  --teal: #416763;
+  --mint: #bbe4cf;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  /* background image from Subtle Patterns */
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/natural_paper.png");
+  background-color: var(--olive);
+}
+
+/* -----------------------------------------------------------------------------
+TYPOGRAPHY
+----------------------------------------------------------------------------- */
+
+h3 {
+  margin: 0 0 0.75em;
+  color: var(--olive);
+  font-size: 1.5rem;
+  padding-bottom: 0.125em;
+  border-bottom: 4px dotted var(--mint);
+}
+
+p {
+  margin-top: 0;
+}
+
+:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------------------
+LINKS
+----------------------------------------------------------------------------- */
+
+a {
+  color: var(--mint);
+  font-weight: bolder;
+  transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.button {
+  background-color: var(--teal);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.25), transparent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3em 0.75em;
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  background-color: var(--olive);
+}
+
+/* -----------------------------------------------------------------------------
+MAIN CONTAINERS
+----------------------------------------------------------------------------- */
+
+main {
+  flex-basis: 75%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+aside {
+  background-color: var(--teal);
+  color: #fff;
+  flex-basis: 25%;
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+/* -----------------------------------------------------------------------------
+CARDS
+----------------------------------------------------------------------------- */
+
+.card {
+  flex-basis: calc(33.333% - 1rem);
+  margin: 0.5rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-content,
+.card-footer {
+  padding: 1rem;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-footer {
+  padding-top: 0;
+}
