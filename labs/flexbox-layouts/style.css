@@ -1,0 +1,203 @@
+/* -----------------------------------------------------------------------------
+GLOBAL STYLES
+Do not edit!
+----------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+section:nth-child(n + 2) {
+  border-top: 1px solid #eee;
+}
+
+.flex-layout {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  border: 10px solid #ddd;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.a,
+.b,
+.c,
+.d,
+.e,
+.f {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a {
+  background: #e58e26;
+}
+
+.b {
+  background: #e54926;
+}
+
+.c {
+  background: #b71540;
+}
+
+.d {
+  background: #0a3d62;
+}
+
+.e {
+  background: #079992;
+}
+
+.f {
+  background: #2b6125;
+}
+
+/* -----------------------------------------------------------------------------
+Layout 1
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-1 {
+}
+
+.layout-1 .a {
+}
+
+.layout-1 .b {
+}
+
+.layout-1 .c {
+}
+
+.layout-1 .d {
+}
+
+.layout-1 .e {
+}
+
+.layout-1 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 2
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-2 {
+}
+
+.layout-2 .a {
+}
+
+.layout-2 .b {
+}
+
+.layout-2 .c {
+}
+
+.layout-2 .d {
+}
+
+.layout-2 .e {
+}
+
+.layout-2 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 3
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-3 {
+}
+
+.layout-3 .a {
+}
+
+.layout-3 .b {
+}
+
+.layout-3 .c {
+}
+
+.layout-3 .d {
+}
+
+.layout-3 .e {
+}
+
+.layout-3 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 4
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-4 {
+}
+
+.layout-4 .a {
+}
+
+.layout-4 .b {
+}
+
+.layout-4 .c {
+}
+
+.layout-4 .d {
+}
+
+.layout-4 .e {
+}
+
+.layout-4 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 5
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-5 {
+}
+
+.layout-5 .a {
+}
+
+.layout-5 .b {
+}
+
+.layout-5 .c {
+}
+
+.layout-5 .d {
+}
+
+.layout-5 .e {
+}
+
+.layout-5 .f {
+}
