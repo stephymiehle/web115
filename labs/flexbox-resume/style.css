@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: rgba(0, 0, 0, 0.1);
+  --muted: rgba(0, 0, 0, 0.65);
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+  background-color: #ececec;
+}
+
+main {
+  display: flex;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.profile,
+.resume {
+  padding: 2rem;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p,
+li {
+  margin-bottom: 1rem;
+}
+
+:last-child {
+  margin-bottom: 0;
+}
+
+/* Profile */
+
+.profile {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 300px;
+  flex-shrink: 0;
+}
+
+.profile figure {
+  --size: 120px;
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile ul {
+  --icon-gap: 2px;
+
+  margin: calc(var(--icon-gap) * -1);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile li {
+  display: block;
+  margin: var(--icon-gap);
+}
+
+.profile a {
+  --icon-accent-color: #222;
+
+  background-color: var(--icon-accent-color);
+  color: #fff;
+  border: 2px solid var(--icon-accent-color);
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile a:hover {
+  background-color: transparent;
+  color: var(--icon-accent-color);
+}
+
+/* Resume */
+
+.resume {
+  border-left: 1px solid var(--border-color);
+}
+
+.resume-group:nth-child(n + 2) {
+  margin-top: 3rem;
+}
+
+.resume-item:nth-of-type(n + 2) {
+  margin-top: 2rem;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-item-meta {
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.resume-item-header .separator {
+  border-bottom: 3px dotted var(--border-color);
+  margin: 0 0.5em;
+  flex-grow: 1;
+}
+
+.resume h4 {
+  color: var(--muted);
+}
+
+.resume .skill-container {
+  --skill-col-gap: 0.5rem;
+
+  display: flex;
+  margin: 0 calc(var(--skill-col-gap) * -1);
+}
+
+.resume .skillset {
+  flex: 1;
+  margin: 0 var(--skill-col-gap);
+}
+
+.resume .skill-container ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.resume .skill-container li {
+  display: block;
+  line-height: 1.2;
+}
+
+.resume .skill-container em {
+  font-size: 0.85em;
+  color: var(--muted);
+}
