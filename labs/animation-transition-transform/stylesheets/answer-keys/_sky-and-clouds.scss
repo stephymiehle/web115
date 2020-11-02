@@ -1,0 +1,61 @@
+// ██     ██   █████   ██  ██████  ██
+// ██     ██  ██   ██  ██    ██    ██
+// ██  █  ██  ███████  ██    ██    ██
+// ██ ███ ██  ██   ██  ██    ██
+//  ███ ███   ██   ██  ██    ██    ██
+
+// Before checking these answers, try solving it on your own!
+// There are many ways to approach the same problem –
+// your solution may be different but work just as well.
+
+/* -----------------------------------------------------------------------------
+Sky & Clouds Section
+----------------------------------------------------------------------------- */
+
+section.sky {
+  .clouds {
+    background-color: #21417e;
+  }
+
+  .cloud {
+    width: 100%;
+    height: 100%;
+    background-size: 600px;
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-name: cloudDrift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @each $number in (1, 2, 3, 4) {
+    // We can interpolate variables in Sass to speed up the tedious details
+    // https://sass-lang.com/documentation/style-rules/declarations#interpolation
+    // Here, the number is getting passed in to generate .cloud-1, .cloud-2, etc.
+    // We can also do some basic math using those numbers as long as we wrap it in parentheses
+
+    .cloud-#{$number} {
+      background-image: url(../images/cloud-#{$number}.svg);
+      z-index: (4 - $number);
+      // TODO: Set the animation duration so that it is fastest on cloud-1 and slowest on cloud-4
+      // How could you do this using the math technique?
+      animation-duration: (15s * $number / 2);
+    }
+  }
+}
+
+@keyframes cloudDrift {
+  // TODO: Create the animation!
+  // Hint: The background-size is 600px wide
+
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 600px;
+  }
+}

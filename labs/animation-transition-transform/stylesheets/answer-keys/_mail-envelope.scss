@@ -1,0 +1,70 @@
+// ██     ██   █████   ██  ██████  ██
+// ██     ██  ██   ██  ██    ██    ██
+// ██  █  ██  ███████  ██    ██    ██
+// ██ ███ ██  ██   ██  ██    ██
+//  ███ ███   ██   ██  ██    ██    ██
+
+// Before checking these answers, try solving it on your own!
+// There are many ways to approach the same problem –
+// your solution may be different but work just as well.
+
+/* -----------------------------------------------------------------------------
+Mail Envelope Section
+----------------------------------------------------------------------------- */
+
+.mail-time {
+  .canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f366a;
+    color: rgba(#fff, 0.1);
+    background-image: radial-gradient(currentColor 2px, transparent 2px),radial-gradient(currentColor 2px, transparent 2px);
+    background-size: calc(20 * 2px) calc(20 * 2px);
+    background-position: 0 0,calc(10 * 2px) calc(10 * 2px);
+
+    #contents {
+      // TODO: Add a transition so the hover effect moves smoothly instead of jumps up
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover #contents {
+      // TODO: Reveal the envelope contents!
+      // Move the contents up 800px (that is relative to the original illustration size
+      transform: translateY(-800px);
+    }
+  }
+
+  svg {
+    width: 40%;
+  }
+}
+
+.envelopeclass--2 {
+  fill: #f2f2f2;
+}
+
+.envelopeclass--3 {
+  fill: #fff;
+}
+
+.envelopeclass--4 {
+  fill: #f5d207;
+}
+
+.envelopeclass--5 {
+  opacity: 0.4;
+}
+
+.envelopeclass--6 {
+  fill: #e6e6e6;
+}
+
+.envelopeclass--7,
+.envelopeclass--8 {
+  mix-blend-mode: soft-light;
+}
+
+.envelopeclass--8 {
+  opacity: 0.6;
+}

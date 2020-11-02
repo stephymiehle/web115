@@ -1,0 +1,196 @@
+/* -----------------------------------------------------------------------------
+General Styles
+----------------------------------------------------------------------------- */
+body {
+  background-color: #eee;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(255, 255, 255, 0.2) 30px, rgba(255, 255, 255, 0.2)60px);
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  width: 630px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 100px 0;
+  padding: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.canvas {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.canvas:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+h2 {
+  padding: 1rem 0;
+  margin: 0;
+}
+
+/* -----------------------------------------------------------------------------
+Sky & Clouds Section
+----------------------------------------------------------------------------- */
+section.sky .clouds {
+  background-color: #21417e;
+}
+
+section.sky .cloud {
+  width: 100%;
+  height: 100%;
+  background-size: 600px;
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-name: cloudDrift;
+          animation-name: cloudDrift;
+}
+
+section.sky .cloud-1 {
+  background-image: url(../images/cloud-1.svg);
+  z-index: 3;
+}
+
+section.sky .cloud-2 {
+  background-image: url(../images/cloud-2.svg);
+  z-index: 2;
+}
+
+section.sky .cloud-3 {
+  background-image: url(../images/cloud-3.svg);
+  z-index: 1;
+}
+
+section.sky .cloud-4 {
+  background-image: url(../images/cloud-4.svg);
+  z-index: 0;
+}
+
+@-webkit-keyframes cloudDrift {}
+
+@keyframes cloudDrift {}/* -----------------------------------------------------------------------------
+Mail Envelope Section
+----------------------------------------------------------------------------- */
+.mail-time .canvas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f366a;
+  color: rgba(255, 255, 255, 0.1);
+  background-image: radial-gradient(currentColor 2px, transparent 2px), radial-gradient(currentColor 2px, transparent 2px);
+  background-size: calc(20 * 2px) calc(20 * 2px);
+  background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
+}
+
+.mail-time svg {
+  width: 40%;
+}
+
+.envelopeclass--2 {
+  fill: #f2f2f2;
+}
+
+.envelopeclass--3 {
+  fill: #fff;
+}
+
+.envelopeclass--4 {
+  fill: #f5d207;
+}
+
+.envelopeclass--5 {
+  opacity: 0.4;
+}
+
+.envelopeclass--6 {
+  fill: #e6e6e6;
+}
+
+.envelopeclass--7,
+.envelopeclass--8 {
+  mix-blend-mode: soft-light;
+}
+
+.envelopeclass--8 {
+  opacity: 0.6;
+}
+
+/* -----------------------------------------------------------------------------
+Tick Tock Clock Section
+----------------------------------------------------------------------------- */
+.tick-tock .canvas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2d0a04;
+  color: rgba(255, 255, 255, 0.05);
+  background-image: linear-gradient(45deg, currentColor 50%, transparent 50%);
+  background-size: 50px 50px;
+}
+
+.tick-tock svg {
+  width: 40%;
+}
+
+.tick-tock .minutes-hand,
+.tick-tock .hour-hand {
+  -webkit-animation-name: clockHandRotate;
+          animation-name: clockHandRotate;
+  fill: #1f3669;
+}
+
+@-webkit-keyframes clockHandRotate {}
+
+@keyframes clockHandRotate {}.frame-inner {
+  fill: #f5d20a;
+}
+
+.frame-outer {
+  fill: #f5b107;
+}
+
+.clock-fill {
+  fill: #fff;
+}
+
+.hour-markers {
+  fill: #ddd;
+}
+
+.center-dot {
+  fill: #31508c;
+}
+/*# sourceMappingURL=style.css.map */

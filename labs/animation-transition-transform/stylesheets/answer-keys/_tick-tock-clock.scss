@@ -1,0 +1,91 @@
+// ██     ██   █████   ██  ██████  ██
+// ██     ██  ██   ██  ██    ██    ██
+// ██  █  ██  ███████  ██    ██    ██
+// ██ ███ ██  ██   ██  ██    ██
+//  ███ ███   ██   ██  ██    ██    ██
+
+// Before checking these answers, try solving it on your own!
+// There are many ways to approach the same problem –
+// your solution may be different but work just as well.
+
+/* -----------------------------------------------------------------------------
+Tick Tock Clock Section
+----------------------------------------------------------------------------- */
+
+.tick-tock {
+  // Hint: You can use Sass math to create a nice relationship between the minutes and hour duration!
+  $duration: 5s;
+
+  .canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d0a04;
+    color: rgba(#fff, 0.05);
+    background-image: linear-gradient(45deg, currentColor 50%, transparent 50%);
+    background-size: 50px 50px;
+  }
+
+  svg {
+    width: 40%;
+  }
+
+  // TODO: Add animation!
+  // We can use the same basic rotation animation for both hands
+  // Each hand will need its own animation duration
+  // Hint: You'll need to set the transform-origin; it will be relative to the whole clock
+  // Hint 2: You can use Sass math to create a nice relationship between the minutes and hour duration!
+
+  .minutes-hand,
+  .hour-hand {
+    animation-name: clockHandRotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    fill: #1f3669;
+  }
+
+  .minutes-hand {
+    // TODO: Add animation-duration
+    animation-duration: $duration;
+  }
+  
+  .hour-hand {
+    // TODO: Add animation-duration
+    animation-duration: ($duration * 12);
+  }
+}
+
+@keyframes clockHandRotate {
+  // TODO: Create the animation!
+  // Hint: You'll need to set the transform-origin
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.frame-inner {
+  fill: #f5d20a;
+}
+
+.frame-outer {
+  fill: #f5b107;
+}
+
+.clock-fill {
+  fill: #fff;
+}
+
+.hour-markers {
+  fill: #ddd;
+}
+
+.center-dot {
+  fill: #31508c;
+}
