@@ -9,9 +9,9 @@ Mail Envelope Section
     justify-content: center;
     background-color: #1f366a;
     color: rgba(#fff, 0.1);
-    background-image: radial-gradient(currentColor 2px, transparent 2px),radial-gradient(currentColor 2px, transparent 2px);
-    background-size: calc(20 * 2px) calc(20 * 2px);
-    background-position: 0 0,calc(10 * 2px) calc(10 * 2px);
+    background-image: radial-gradient(currentColor 2px, transparent 2px), radial-gradient(currentColor 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
 
     #contents {
       // TODO: Add a transition so the hover effect moves smoothly instead of jumps up
