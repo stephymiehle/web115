@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #a37032;
+  font-family: "Libre Baskerville", serif;
+  background-image: url(images/white-wall-3-2.png); /* via https://transparenttextures.com */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+h1 small {
+  display: block;
+  margin-top: 0.25em;
+  font-weight: 400;
+  font-size: 0.65em;
+  font-style: italic;
+  color: #f7e0b4;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+/*
+-----------------------------------------
+Global styles for ALL figures
+Inherited by all of the fancier styles,
+but can be overridden as needed
+-----------------------------------------
+*/
+
+figure {
+  display: inline-block;
+  position: relative;
+  margin: 1rem;
+  padding: 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  border: 10px solid #fff;
+  width: 400px;
+  height: 300px;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+figure figcaption {
+  position: absolute;
+  background: rgb(42 23 19 / 85%);
+  color: #fff;
+  text-align: left;
+  padding: 1em;
+  opacity: 0;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+figure figcaption a {
+  color: inherit;
+}
+
+/*
+-----------------------------------------
+Basic figure style
+-----------------------------------------
+*/
+
+figure.basic figcaption {
+  bottom: 0;
+  font-size: 0.85rem;
+}
+
+/*
+-----------------------------------------
+Beach style
+-----------------------------------------
+*/
+
+figure.beach {
+  overflow: hidden;
+}
+
+figure.beach figcaption {
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 60%;
+  transition: all 0.2s ease-in-out;
+}
+
+figure.beach:hover figcaption {
+  left: 0;
+}
+
+figure.beach p {
+  font-size: 0.85rem;
+  margin-top: 0;
+}
+
+figure.beach p.title {
+  font-size: 1.2rem;
+}
+
+/*
+-----------------------------------------
+Denver style
+-----------------------------------------
+*/
+
+figure.denver figcaption {
+  width: 250px;
+  height: 250px;
+
+  /*
+    Scoot the whole box over by 50% of the width/height of the <figure>
+    ...but that doesn't account for the width of the <figcaption>!
+  */
+  left: 50%;
+  top: 50%;
+
+  /*
+    Use translate() to subtract half the width/height of the <figcaption>
+    In combination with the left and top above, that centers it.
+    Use scale() to set an initial value that we can animate with "transition"
+  */
+  transition: all 0.2s ease-in-out;
+  transform: translate(-50%, -50%) scale(85%);
+}
+
+figure.denver:hover figcaption {
+  /*
+    We still need to keep the translate() here or else we'll lose it on hover
+    The scale() is set to 100%, so the box will appear to grow a little
+  */
+  transform: translate(-50%, -50%) scale(100%);
+}
+
+figure.denver p.title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+figure.denver p.source {
+  margin: 1rem 0 0;
+  position: absolute;
+  bottom: 1rem; /* relative to the <figcaption> */
+}
+
+/*
+-----------------------------------------
+Gas Station style
+-----------------------------------------
+*/
+
+figure.gas-station {
+  overflow: hidden;
+}
+
+figure.gas-station img,
+figure.gas-station figcaption {
+  transition: all 0.2s ease-in-out;
+}
+
+figure.gas-station:hover img {
+  filter: blur(10px); /* animated because of the transition above */
+}
+
+figure.gas-station figcaption {
+  inset: 0;
+  background: rgb(42 23 19 / 45%);
+}
+
+figure.gas-station p:first-child {
+  margin-top: 0;
+}
+
+figure.gas-station p:last-child {
+  margin-bottom: 0;
+}
+
+figure.gas-station .meta {
+  position: absolute;
+  bottom: 1rem;
+}
+
+figure.gas-station p.title {
+  font-size: 2rem;
+}
