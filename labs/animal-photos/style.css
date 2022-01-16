@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  padding: 0 1rem 3rem;
+  padding: 0 0 3rem;
   font-family: "Courier Prime", monospace;
   background-color: #efecd9;
   color: #522e19;
@@ -43,6 +43,7 @@ main {
   width: 85%;
   max-width: 800px;
   margin: 1rem auto 0;
+  padding: 0 1rem;
 }
 
 figure {
