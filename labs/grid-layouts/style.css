@@ -1,0 +1,300 @@
+/* -----------------------------------------------------------------------------
+GLOBAL STYLES
+Do not edit!
+----------------------------------------------------------------------------- */
+
+:root {
+  --border-radius: 5px;
+  --box-padding: 20px;
+  --gold: #e58e26;
+  --orange: #e54926;
+  --red: #b71540;
+  --blue: #0a3d62;
+  --teal: #079992;
+  --green: #2b6125;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* --------------------------
+Format layout sections
+-------------------------- */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+section:nth-child(n + 2) {
+  border-top: 1px solid #eee;
+}
+
+.grid-layout {
+  display: grid;
+  width: 100%;
+  color: #fff;
+}
+
+.grid-layout > * {
+  border-radius: var(--border-radius);
+}
+
+/* --------------------------
+Format text styles
+-------------------------- */
+
+.a,
+.b,
+.c,
+.d,
+.e,
+.f,
+.grid-layout > * {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: var(--box-padding);
+}
+
+.grid-layout h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.grid-layout section h2 {
+  font-size: 1.2rem;
+}
+
+.grid-layout p,
+.grid-layout li {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.grid-layout p {
+  margin: 0;
+}
+
+.grid-layout nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: var(--box-padding);
+  border-radius: var(--border-radius);
+}
+
+.grid-layout nav ul,
+.grid-layout nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid-layout nav li {
+  margin-top: 0.5rem;
+}
+
+.grid-layout nav a {
+  color: var(--teal);
+}
+
+.grid-layout nav a:hover {
+  color: var(--gold);
+}
+
+/* --------------------------
+Format letter boxes
+-------------------------- */
+
+.a,
+.b,
+.c,
+.d,
+.e,
+.f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------
+Assign Colors
+-------------------------- */
+
+.a,
+.grid-layout header {
+  background: var(--gold);
+}
+
+.b,
+.grid-layout aside {
+  background: var(--orange);
+}
+
+.c,
+.grid-layout main {
+  background: var(--red);
+}
+
+.d,
+.grid-layout section {
+  background: var(--blue);
+}
+
+.e,
+.grid-layout footer {
+  background: var(--teal);
+}
+
+.f {
+  background: var(--green);
+}
+
+/* -----------------------------------------------------------------------------
+Custom Global Styles
+Add styles that will affect every grid-layout beneath this comment
+
+Hint: good for spacing!
+----------------------------------------------------------------------------- */
+
+.grid-layout {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 1
+Add the styles for the layout beneath this comment!
+
+Extra challenge: this section can be accomplished with 1 new line
+----------------------------------------------------------------------------- */
+
+.layout-1 {
+}
+
+.layout-1 .a {
+}
+
+.layout-1 .b {
+}
+
+.layout-1 .c {
+}
+
+.layout-1 .d {
+}
+
+.layout-1 .e {
+}
+
+.layout-1 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 2
+Add the styles for the layout beneath this comment!
+
+Extra challenge: this section can be accomplished with 2 new lines
+(using a new selector; not counting the selector or {} in line count)
+----------------------------------------------------------------------------- */
+
+.layout-2 {
+}
+
+.layout-2 .a {
+}
+
+.layout-2 .b {
+}
+
+.layout-2 .c {
+}
+
+.layout-2 .d {
+}
+
+.layout-2 .e {
+}
+
+.layout-2 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 3
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-3 {
+}
+
+.layout-3 .a {
+}
+
+.layout-3 .b {
+}
+
+.layout-3 .c {
+}
+
+.layout-3 .d {
+}
+
+.layout-3 .e {
+}
+
+.layout-3 .f {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 4
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-4 {
+}
+
+.layout-4 header {
+}
+
+.layout-4 aside {
+}
+
+.layout-4 main {
+}
+
+.layout-4 section {
+}
+
+.layout-4 footer {
+}
+
+/* -----------------------------------------------------------------------------
+Layout 5
+Add the styles for the layout beneath this comment!
+----------------------------------------------------------------------------- */
+
+.layout-5 {
+}
+
+.layout-5 header {
+}
+
+.layout-5 aside {
+}
+
+.layout-5 main {
+}
+
+.layout-5 section {
+}
+
+.layout-5 footer {
+}
