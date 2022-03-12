@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --title-font-size: 1.5rem;
+}
+
+body {
+  font-family: "League Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+h2 {
+  line-height: 1.1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.post-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.article-title {
+  font-size: var(--title-font-size, 1.5rem);
+  margin-bottom: 1rem;
+}
+
+.article-image {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.byline-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .post-grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem 2rem;
+  }
+
+  article {
+    grid-column-end: span 3;
+  }
+
+  article:nth-of-type(1) {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+
+  article:nth-of-type(6),
+  article:nth-of-type(7) {
+    grid-column-end: span 6;
+  }
+
+  article:nth-of-type(1),
+  article:nth-of-type(6),
+  article:nth-of-type(7) {
+    --title-font-size: 2.25rem;
+  }
+}
