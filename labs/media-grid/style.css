@@ -4,6 +4,10 @@
 
 :root {
   --title-font-size: 1.5rem;
+  --excerpt-font-size: 1rem;
+  --body-text: #4d2e17;
+  --primary: #af4d2b;
+  --primary-light: #e65924;
 }
 
 body {
@@ -11,6 +15,7 @@ body {
     "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   line-height: 1.4;
+  color: var(--body-text, #4d2e17);
 }
 
 h2 {
@@ -22,8 +27,18 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary, #af4d2b);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-light, #e65924);
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
@@ -32,6 +47,8 @@ img {
 .post-grid {
   display: grid;
   gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .article-title {
@@ -39,21 +56,48 @@ img {
   margin-bottom: 1rem;
 }
 
-.article-image {
+.article-image-link {
+  display: block;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.article-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-excerpt {
+  font-size: var(--excerpt-font-size, 1rem);
 }
 
 .byline {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-weight: 450;
+  letter-spacing: 0.025em;
+}
+
+.byline-author {
+  margin: 0;
 }
 
 .byline-avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+}
+
+.byline-author-link {
+  text-decoration: none;
+  color: var(--body-text, #4d2e17);
+}
+
+.byline-author-link:hover {
+  color: var(--primary, #af4d2b);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
@@ -74,6 +118,10 @@ img {
     align-items: center;
   }
 
+  article:nth-of-type(1) .article-image-link {
+    height: 100%; /* This lets the image part grow vertically if there is a long headline */
+  }
+
   article:nth-of-type(6),
   article:nth-of-type(7) {
     grid-column-end: span 6;
@@ -83,5 +131,6 @@ img {
   article:nth-of-type(6),
   article:nth-of-type(7) {
     --title-font-size: 2.25rem;
+    --excerpt-font-size: 1.25rem;
   }
 }
