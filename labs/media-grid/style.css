@@ -1,11 +1,28 @@
+/*
+-----------------------------------------
+Global Styles
+-----------------------------------------
+*/
+
 * {
   box-sizing: border-box;
 }
 
 :root {
+  /* Typography */
   --title-font-size: 1.5rem;
   --excerpt-font-size: 1rem;
+
+  /* Byline components */
   --avatar-size: 36px;
+  --border-radius: 5px;
+  --avatar-border-radius: 50%;
+
+  /* Grid */
+  --grid-gap-x: 1rem;
+  --grid-gap-y: var(--grid-gap-x);
+
+  /* Colors */
   --body-text: #4d2e17;
   --primary: #af4d2b;
   --primary-light: #e65924;
@@ -18,7 +35,40 @@ body {
   line-height: 1.4;
   color: var(--body-text, #4d2e17);
   margin: 0;
+  overflow-x: hidden;
 }
+
+h2 {
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary, #af4d2b);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-light, #e65924);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/*
+-----------------------------------------
+Header
+-----------------------------------------
+*/
 
 header {
   background-color: var(--primary, #af4d2b);
@@ -34,60 +84,41 @@ header {
   margin-bottom: 1rem;
 }
 
+header h1 {
+  margin: 0;
+}
+
 header p {
   font-size: 1.5em;
   margin: 0;
 }
 
-h1 {
-  margin: 0;
-}
-
-h2 {
-  line-height: 1.1;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary, #af4d2b);
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--primary-light, #e65924);
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-left: 1em;
-  padding-right: 1em;
-}
+/*
+-----------------------------------------
+Post Grid
+-----------------------------------------
+*/
 
 .post-grid {
   display: grid;
-  gap: 1rem;
+  gap: var(--grid-gap-y, 1rem) var(--grid-gap-x, 1rem);
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-.article-title {
-  font-size: var(--title-font-size, 1.5rem);
-  margin-bottom: 1rem;
-}
+/*
+-----------------------------------------
+Images & Image Links
+-----------------------------------------
+*/
 
 .article-image-link {
   display: block;
-  border-radius: 5px;
+  border-radius: var(--border-radius, 5px);
 }
 
 .byline-avatar-link {
-  border-radius: 50%;
+  border-radius: var(--avatar-border-radius, 50%);
   width: var(--avatar-size, 36px);
   height: var(--avatar-size, 36px);
 }
@@ -115,9 +146,26 @@ a:hover {
   filter: brightness(0.8) sepia(0.2) saturate(1.5);
 }
 
+/*
+-----------------------------------------
+Typography
+-----------------------------------------
+*/
+
+.article-title {
+  font-size: var(--title-font-size, 1.5rem);
+  margin-bottom: 1rem;
+}
+
 .article-excerpt {
   font-size: var(--excerpt-font-size, 1rem);
 }
+
+/*
+-----------------------------------------
+Byline
+-----------------------------------------
+*/
 
 .byline {
   display: flex;
@@ -146,6 +194,12 @@ a:hover {
   text-decoration: underline;
 }
 
+/*
+-----------------------------------------
+Media Queries
+-----------------------------------------
+*/
+
 @media screen and (min-width: 768px) {
   header {
     min-height: 200px;
@@ -153,7 +207,8 @@ a:hover {
 
   .post-grid {
     grid-template-columns: repeat(12, 1fr);
-    gap: 3rem 2rem;
+    --grid-gap-x: 2rem;
+    --grid-gap-y: 3rem;
   }
 
   article {
@@ -163,7 +218,7 @@ a:hover {
   article:nth-of-type(1) {
     grid-column: 1 / -1;
     display: grid;
-    gap: 2rem;
+    gap: var(--grid-gap-x, 2rem);
     grid-template-columns: 3fr 2fr;
     align-items: center;
   }
