@@ -218,6 +218,10 @@ Media Queries
     min-height: 200px;
   }
 
+  header h1 {
+    font-size: 2.75rem;
+  }
+
   .post-grid {
     --grid-gap-x: 2rem;
     --grid-gap-y: 3rem;
