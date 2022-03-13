@@ -28,6 +28,9 @@ Global Styles
   --body-text: #4d2e17;
   --primary: #af4d2b;
   --primary-light: #e65924;
+
+  /* Decorative elements */
+  --doodle-circle-size: 550px;
 }
 
 body {
@@ -241,17 +244,33 @@ Media Queries
     height: 100%; /* This lets the image part grow vertically if there is a long headline */
   }
 
-  /* Special formatting: text in 1-card and 2-card sections */
+  /* Special formatting: text in 1-card section */
 
   article:nth-of-type(1) {
     --title-font-size: var(--title-font-size--large, 2.25rem);
     --excerpt-font-size: var(--excerpt-font-size--large, 1.25rem);
   }
+
+  /* Special formatting: doodle circle for 1-card section */
+
+  article:nth-of-type(1):before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: var(--doodle-circle-size, 550px);
+    height: var(--doodle-circle-size, 550px);
+    left: -220px;
+    top: -250px;
+    z-index: -1;
+    background-image: url(doodle-circle.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1399px) {
   .container {
-    max-width: 1200px;
+    max-width: 960px;
   }
 
   article {
@@ -266,6 +285,29 @@ Media Queries
     --title-font-size: var(--title-font-size--large, 2.25rem);
     --excerpt-font-size: var(--excerpt-font-size--large, 1.25rem);
   }
+
+  /* Special formatting: doodle for 2-card column */
+
+  article:nth-child(5):before {
+    content: "";
+    display: block;
+
+    /* Positioning to center the column even though its parent card isn't centered */
+    width: 100vw;
+    position: absolute;
+    top: 10%;
+    left: calc(
+      100% + (var(--grid-gap-x, 2rem) / 2)
+    ); /* Push it all the way to the right edge of the card, then half of the grid gap */
+    margin-left: -50vw; /* Pull it back by half the width of the browser window */
+    z-index: -1; /* Put it behind the cards */
+
+    /* Style the doodle */
+    height: 40%;
+    background-image: url(doodle-divider.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -275,6 +317,14 @@ Media Queries
 
   article {
     grid-column-end: span 3; /* 12 columns % span 3 = 4 cards across */
+  }
+
+  /* Special formatting: doodle circle for 1-card section */
+
+  article:nth-of-type(1):before {
+    --doodle-circle-size: 750px;
+    left: -320px;
+    top: -355px;
   }
 
   /* Special formatting: 2-card columns */
