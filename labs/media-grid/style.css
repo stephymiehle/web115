@@ -12,6 +12,8 @@ Global Styles
   /* Typography */
   --title-font-size: 1.5rem;
   --excerpt-font-size: 1rem;
+  --title-font-size--large: 2.25rem;
+  --excerpt-font-size--large: 1.25rem;
 
   /* Byline components */
   --avatar-size: 36px;
@@ -20,7 +22,7 @@ Global Styles
 
   /* Grid */
   --grid-gap-x: 1rem;
-  --grid-gap-y: var(--grid-gap-x);
+  --grid-gap-y: 2rem;
 
   /* Colors */
   --body-text: #4d2e17;
@@ -58,7 +60,6 @@ img {
 }
 
 .container {
-  max-width: 1400px;
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
@@ -81,7 +82,6 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 1rem;
 }
 
 header h1 {
@@ -102,8 +102,12 @@ Post Grid
 .post-grid {
   display: grid;
   gap: var(--grid-gap-y, 1rem) var(--grid-gap-x, 1rem);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.post-grid article {
+  position: relative; /* Not necessary for the layout; used for decorative elements */
 }
 
 /*
@@ -200,23 +204,33 @@ Media Queries
 -----------------------------------------
 */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+  .container {
+    max-width: 768px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   header {
     min-height: 200px;
   }
 
   .post-grid {
-    grid-template-columns: repeat(12, 1fr);
     --grid-gap-x: 2rem;
     --grid-gap-y: 3rem;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   article {
-    grid-column-end: span 3;
+    grid-column-end: span 6; /* 12 columns % span 6 = 2 cards across */
   }
 
+  /* Special formatting: 1-card column */
+
   article:nth-of-type(1) {
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* Span all columns */
     display: grid;
     gap: var(--grid-gap-x, 2rem);
     grid-template-columns: 3fr 2fr;
@@ -227,15 +241,71 @@ Media Queries
     height: 100%; /* This lets the image part grow vertically if there is a long headline */
   }
 
+  /* Special formatting: text in 1-card and 2-card sections */
+
+  article:nth-of-type(1) {
+    --title-font-size: var(--title-font-size--large, 2.25rem);
+    --excerpt-font-size: var(--excerpt-font-size--large, 1.25rem);
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1399px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  article {
+    grid-column-end: span 4; /* 12 columns % span 4 = 3 cards across */
+  }
+
+  /* Special formatting: 2-card columns */
+
+  article:nth-of-type(5),
+  article:nth-of-type(6) {
+    grid-column-end: span 6;
+    --title-font-size: var(--title-font-size--large, 2.25rem);
+    --excerpt-font-size: var(--excerpt-font-size--large, 1.25rem);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  article {
+    grid-column-end: span 3; /* 12 columns % span 3 = 4 cards across */
+  }
+
+  /* Special formatting: 2-card columns */
+
   article:nth-of-type(6),
   article:nth-of-type(7) {
     grid-column-end: span 6;
-  }
-
-  article:nth-of-type(1),
-  article:nth-of-type(6),
-  article:nth-of-type(7) {
     --title-font-size: 2.25rem;
     --excerpt-font-size: 1.25rem;
+  }
+
+  /* Special formatting: doodle for 2-card column */
+
+  article:nth-child(6):before {
+    content: "";
+    display: block;
+
+    /* Positioning to center the column even though its parent card isn't centered */
+    width: 100vw;
+    position: absolute;
+    top: 10%;
+    left: calc(
+      100% + (var(--grid-gap-x, 2rem) / 2)
+    ); /* Push it all the way to the right edge of the card, then half of the grid gap */
+    margin-left: -50vw; /* Pull it back by half the width of the browser window */
+    z-index: -1; /* Put it behind the cards */
+
+    /* Style the doodle */
+    height: 40%;
+    background-image: url(doodle-divider.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 }
