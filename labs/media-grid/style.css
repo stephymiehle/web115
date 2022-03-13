@@ -5,6 +5,7 @@
 :root {
   --title-font-size: 1.5rem;
   --excerpt-font-size: 1rem;
+  --avatar-size: 36px;
   --body-text: #4d2e17;
   --primary: #af4d2b;
   --primary-light: #e65924;
@@ -59,13 +60,35 @@ a:hover {
 .article-image-link {
   display: block;
   border-radius: 5px;
+}
+
+.byline-avatar-link {
+  border-radius: 50%;
+  width: var(--avatar-size, 36px);
+  height: var(--avatar-size, 36px);
+}
+
+.article-image-link,
+.byline-avatar-link {
   overflow: hidden;
 }
 
-.article-image {
+.article-image,
+.byline-avatar {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.article-image,
+.byline-avatar {
+  transition: all 0.3s ease-in-out;
+}
+
+.article-image-link:hover .article-image,
+.byline-avatar-link:hover .byline-avatar {
+  transform: scale(1.1);
+  filter: brightness(0.8) sepia(0.2) saturate(1.5);
 }
 
 .article-excerpt {
@@ -85,9 +108,8 @@ a:hover {
 }
 
 .byline-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .byline-author-link {
