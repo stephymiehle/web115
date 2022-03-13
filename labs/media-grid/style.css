@@ -17,6 +17,30 @@ body {
   font-weight: 300;
   line-height: 1.4;
   color: var(--body-text, #4d2e17);
+  margin: 0;
+}
+
+header {
+  background-color: var(--primary, #af4d2b);
+  color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
 }
 
 h2 {
@@ -123,6 +147,10 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    min-height: 200px;
+  }
+
   .post-grid {
     grid-template-columns: repeat(12, 1fr);
     gap: 3rem 2rem;
