@@ -76,6 +76,10 @@ Header
 
 header {
   background-color: var(--primary, #af4d2b);
+  background-image: url(pattern.svg);
+  background-size: 500px;
+  background-position: bottom center;
+  background-blend-mode: overlay;
   color: #fff;
   padding-top: 1rem;
   padding-bottom: 1rem;
