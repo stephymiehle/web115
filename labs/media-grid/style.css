@@ -207,6 +207,59 @@ Byline
 
 /*
 -----------------------------------------
+Footer
+-----------------------------------------
+*/
+
+footer {
+  background-color: #f8e8e4;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+footer .container {
+  display: grid;
+  gap: var(--grid-gap-x) var(--grid-gap-y);
+}
+
+footer h2 {
+  color: var(--primary-light);
+  border-bottom: 1px solid;
+  padding-bottom: 0.25em;
+  font-size: var(--title-font-size);
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer .fa-ul {
+  --fa-li-margin: 1.75rem;
+}
+
+footer li {
+  margin: 0;
+  padding: 0;
+}
+
+footer li + li {
+  margin-top: 0.5em;
+}
+
+footer a {
+  font-weight: 450;
+}
+
+footer i,
+footer .svg-inline--fa {
+  color: #ff983f;
+}
+
+/*
+-----------------------------------------
 Media Queries
 -----------------------------------------
 */
@@ -274,6 +327,24 @@ Media Queries
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .copyright {
+    grid-column-end: span 2;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  footer {
+    background-image: url(doodle-wave.svg);
+    background-position-x: -120px;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: 500px;
+  }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1399px) {
@@ -315,6 +386,15 @@ Media Queries
     background-image: url(doodle-divider.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  }
+
+  footer .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer .copyright {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
   }
 }
 
@@ -365,5 +445,13 @@ Media Queries
     background-image: url(doodle-divider.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  }
+
+  footer .container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  footer .copyright {
+    grid-column-end: span 2;
   }
 }
