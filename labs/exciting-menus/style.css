@@ -1,0 +1,295 @@
+/*
+ * Patterns by SubtlePatterns
+ * Images in the freeform menu from https://unsplash.com/
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One|IM+Fell+English|Montserrat|Sanchez|Rock+Salt);
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Horizontal Menu */
+
+.horizontal {
+  background: url(https://pagecdn.io/lib/subtlepatterns/green-cup.png) rgb(166, 172, 150);
+  font-family: "IM Fell English", serif;
+}
+
+.horizontal li {
+  display: inline;
+  padding: 20px;
+}
+
+.horizontal a {
+  display: inline-block;
+  color: rgb(70, 56, 38);
+  padding: 9px 19px 7px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+.horizontal a:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(53, 38, 11, 0.14);
+  box-shadow: inset 3px 3px 6px;
+}
+
+/* Vertical Menu */
+
+.vertical {
+  background: url(https://pagecdn.io/lib/subtlepatterns/black-lozenge.png) rgb(26, 26, 26);
+}
+
+.vertical ul {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 25px 3px #000;
+}
+
+.vertical li {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font: 1.25rem "Montserrat", sans-serif;
+}
+
+.vertical li:hover {
+  background-image: linear-gradient(
+    180deg,
+    hsl(0, 0%, 78%) 0%,
+    hsl(0, 0%, 90%) 47%,
+    hsl(0, 0%, 78%) 53%,
+    hsl(0, 0%, 70%) 100%
+  );
+
+  box-shadow: inset 0px 0px 8px #000;
+}
+
+.vertical li:hover a {
+  color: #000;
+  text-shadow: 1px 1px #fff;
+  letter-spacing: 0.15em;
+}
+
+.vertical a {
+  color: rgba(255, 255, 255, 0.25);
+  display: block;
+  padding: 20px;
+  letter-spacing: 0;
+  transition: letter-spacing 0.4s ease-in-out;
+}
+
+/* Button Menu */
+
+.buttons {
+  background: url(https://pagecdn.io/lib/subtlepatterns/congruent-pentagon.png) rgb(190, 248, 207);
+}
+
+.buttons li {
+  display: inline-block;
+}
+
+.buttons a {
+  display: inline-block;
+  color: #fff;
+  background: #64e0ba;
+  padding: 10px 18px;
+  margin: 15px 10px;
+  font-family: "Fredoka One", sans-serif;
+  border-radius: 20px;
+  box-shadow: 0 8px 0 0 #4aa185;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: background 0.2s ease-in-out, top 0.3s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.buttons a:hover {
+  background: rgb(161, 229, 108);
+  box-shadow: 0 8px 0 0 #60a14a;
+}
+
+.buttons a:active {
+  position: relative;
+  top: 4px;
+  background: #67d385;
+  box-shadow: 0 8px 0 0 #4aa16f, 0 10px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* Icon Menu */
+
+.icons {
+  background: url(https://pagecdn.io/lib/subtlepatterns/geometry-2.png) #fafafa;
+}
+
+.icons ul {
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+  background: #fafafa;
+  box-shadow: 0 0 50px #fafafa;
+}
+
+.icons li {
+  text-align: left;
+  padding: 10px 0;
+}
+
+.icons a {
+  font: bold 2rem Sanchez, serif;
+  padding: 10px;
+  display: inline-block;
+  color: #222;
+}
+
+.icons a:before {
+  content: "";
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  display: inline-block;
+  margin: -1.25rem 1rem;
+  transition: transform 1.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+}
+
+.icons li:nth-of-type(1) a:before {
+  background: #b439c8;
+  content: "\f015";
+}
+
+.icons li:nth-of-type(1):hover a {
+  color: #b439c8;
+}
+
+.icons li:nth-of-type(2) a:before {
+  background: #f5405b;
+  content: "\f007";
+}
+
+.icons li:nth-of-type(2):hover a {
+  color: #f5405b;
+}
+
+.icons li:nth-of-type(3) a:before {
+  background: #fb3;
+  content: "\f03e";
+}
+
+.icons li:nth-of-type(3):hover a {
+  color: #fb3;
+}
+
+.icons li:nth-of-type(4) a:before {
+  background: #a6da65;
+  content: "\f155";
+}
+
+.icons li:nth-of-type(4):hover a {
+  color: #a6da65;
+}
+
+.icons li:nth-of-type(5) a:before {
+  background: #14cedb;
+  content: "\f0e0";
+}
+
+.icons li:nth-of-type(5):hover a {
+  color: #14cedb;
+}
+
+.icons li:hover a:before {
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.25), inset -1px -1px 5px 2px rgba(0, 0, 0, 0.25);
+  transform: rotateZ(360deg);
+}
+
+/* Freeform Menu */
+
+.freeform {
+  background: url(https://pagecdn.io/lib/subtlepatterns/old-map.png) #f7eac9;
+  text-align: left;
+}
+
+.freeform li {
+  display: block;
+  padding: 0px;
+  background: yellow;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.freeform a {
+  font: 1.5rem/1.75rem "Rock Salt", cursive;
+  display: block;
+  overflow: hidden;
+  background: #faf3e3;
+  color: #2b2b2b;
+  width: 290px;
+  height: 3.35rem;
+  padding: 10px 20px 20px;
+  border-width: 1px 4px;
+  border-style: solid;
+  border-color: #2b2b2b;
+  transition: all 0.6s ease-in-out;
+}
+
+.freeform li:first-of-type a {
+  border-width: 4px 4px 1px;
+}
+
+.freeform li:last-of-type a {
+  border-width: 1px 4px 4px;
+}
+
+.freeform a:hover {
+  height: 250px;
+}
+
+.freeform a:after {
+  content: "";
+  width: 100%;
+  height: 172px;
+  margin: 15px 0 20px;
+  border-radius: 3px;
+  display: block;
+  background-size: cover;
+}
+
+.freeform li:nth-of-type(1) a:after {
+  background-image: url(https://source.unsplash.com/sN4u56baSB0/300x172);
+}
+
+.freeform li:nth-of-type(2) a:after {
+  background-image: url(https://source.unsplash.com/vVINLKZtGOI/300x172);
+}
+
+.freeform li:nth-of-type(3) a:after {
+  background-image: url(https://source.unsplash.com/KuudDjBHIlA/300x172);
+}
+
+.freeform li:nth-of-type(4) a:after {
+  background-image: url(https://source.unsplash.com/ROQzKIAdY78/300x172);
+}
+
+.freeform li:nth-of-type(5) a:after {
+  background-image: url(https://source.unsplash.com/f8hy1R-89NE/300x172);
+}
