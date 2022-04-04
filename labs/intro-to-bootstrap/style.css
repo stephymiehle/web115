@@ -1,0 +1,38 @@
+html {
+  scroll-padding-top: 56px; /* height of navbar */
+}
+
+body {
+  position: relative;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    no-repeat
+      url(https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2159&q=80)
+      center / cover,
+    #333;
+}
+
+.quote-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    fixed no-repeat
+      url(https://images.unsplash.com/photo-1508864284229-28a2d426f10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)
+      center / cover,
+    #333;
+}
+
+.subscribe-section {
+  background: no-repeat
+      url(https://images.unsplash.com/photo-1459231978203-b7d0c47a2cb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80)
+      center / cover,
+    #333;
+}
+
+.fa-fw {
+  flex-shrink: 0;
+}
+
+.fa-ul {
+  --fa-li-margin: 1.75em;
+}
