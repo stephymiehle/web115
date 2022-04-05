@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intro to Bootstrap</title>
     <link rel="stylesheet" href="scss/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#primary-nav" data-bs-offset="100" tabindex="0">
     <nav id="primary-nav" class="navbar navbar-light navbar-expand-md sticky-top bg-white px-3 shadow">
@@ -36,7 +43,7 @@
         </div>
       </section>
 
-      <section id="features">
+      <section id="features" class="features-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 col-lg-6 py-5 p-lg-5 d-flex flex-column justify-content-center">
@@ -57,36 +64,28 @@
                 <i class="fas fa-tree fa-3x fa-fw"></i>
                 <div>
                   <h3 class="mb-1">Discover New Destinations</h3>
-                  <p class="mb-0 text-white text-opacity-75">
-                    Our trips will introduce you to the best trails and parks
-                  </p>
+                  <p class="mb-0 text-white">Our trips will introduce you to the best trails and parks</p>
                 </div>
               </div>
               <div class="d-flex gap-3 align-items-center">
                 <i class="fas fa-signs-post fa-3x fa-fw"></i>
                 <div>
                   <h3 class="mb-1">Explore Your Way</h3>
-                  <p class="mb-0 text-white text-opacity-75">
-                    Suggested itineraries are provided, but you can blaze your own trail
-                  </p>
+                  <p class="mb-0 text-white">Suggested itineraries are provided, but you can blaze your own trail</p>
                 </div>
               </div>
               <div class="d-flex gap-3 align-items-center">
                 <i class="fas fa-bicycle fa-3x fa-fw"></i>
                 <div>
                   <h3 class="mb-1">Themed Adventures</h3>
-                  <p class="mb-0 text-white text-opacity-75">
-                    Choose a special-interest theme, such as cycling or birdwatching
-                  </p>
+                  <p class="mb-0 text-white">Choose a special-interest theme, such as cycling or birdwatching</p>
                 </div>
               </div>
               <div class="d-flex gap-3 align-items-center">
                 <i class="fas fa-user-group fa-3x fa-fw"></i>
                 <div>
                   <h3 class="mb-1">Go Solo or Make Friends</h3>
-                  <p class="mb-0 text-white text-opacity-75">
-                    Adventure with your own group or join other nature-lovers
-                  </p>
+                  <p class="mb-0 text-white">Adventure with your own group or join other nature-lovers</p>
                 </div>
               </div>
             </div>
@@ -96,18 +95,23 @@
 
       <section id="quote" class="quote-section bg-dark py-5 d-flex align-items-center justify-content-center">
         <div class="container py-5">
-          <blockquote class="blockquote text-center text-white py-5 m-0">
-            <p class="mb-2 fs-1">
-              "As long as I live, I’ll hear waterfalls and birds and winds sing. I’ll interpret the rocks, learn the
-              language of flood, storm, and the avalanche.
-            </p>
-            <p class="mb-0 fs-1">
-              I’ll acquaint myself with the glaciers and wild gardens, and get as near the heart of the world as I can."
-            </p>
-            <footer class="blockquote-footer text-white text-opacity-75 mt-3 fs-3">
-              <cite title="Source Title">John Muir</cite>
-            </footer>
-          </blockquote>
+          <div class="row">
+            <div class="col-12 col-lg-10 mx-auto">
+              <blockquote class="blockquote text-white py-5 m-0 font-serif fst-italic">
+                <p class="mb-2 fs-1">
+                  "As long as I live, I’ll hear waterfalls and birds and winds sing. I’ll interpret the rocks, learn the
+                  language of flood, storm, and the avalanche.
+                </p>
+                <p class="mb-0 fs-1">
+                  I’ll acquaint myself with the glaciers and wild gardens, and get as near the heart of the world as I
+                  can."
+                </p>
+                <footer class="blockquote-footer text-white text-opacity-75 mt-3 fs-3">
+                  <cite title="Source Title">John Muir</cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -237,7 +241,7 @@
     </main>
 
     <footer>
-      <div class="py-3 py-lg-5 bg-dark text-white">
+      <div class="py-3 py-lg-5 bg-primary text-white">
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-4">
@@ -284,31 +288,31 @@
               <ul class="fa-ul">
                 <li>
                   <span class="fa-li">
-                    <i class="fa-solid fas fa-image"></i>
+                    <i class="fa-solid fas fa-image text-cinnamon"></i>
                   </span>
                   All photos:
-                  <a href="https://www.unsplash.com">Unsplash</a>
+                  <a href="https://www.unsplash.com" class="link-rose">Unsplash</a>
                 </li>
                 <li class="mt-1">
                   <span class="fa-li">
-                    <i class="fa-brands fab fa-bootstrap"></i>
+                    <i class="fa-brands fab fa-bootstrap text-cinnamon"></i>
                   </span>
                   Framework:
-                  <a href="https://www.getbootstrap.com">Bootstrap</a>
+                  <a href="https://www.getbootstrap.com" class="link-rose">Bootstrap</a>
                 </li>
                 <li class="mt-1">
                   <span class="fa-li">
-                    <i class="fa-brands fab fa-font-awesome"></i>
+                    <i class="fa-brands fab fa-font-awesome text-cinnamon" class="link-rose"></i>
                   </span>
                   Icons:
-                  <a href="https://www.fontawesome.com">FontAwesome</a>
+                  <a href="https://www.fontawesome.com" class="link-rose">FontAwesome</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="bg-dark py-3 text-white text-center small bg-opacity-75">
+      <div class="bg-cocoa py-3 text-white text-center small">
         <div class="container">Sample project &copy; Stephy Miehle</div>
       </div>
     </footer>
