@@ -31,10 +31,16 @@ $headings-color: $citron;
 $body-color: $cocoa;
 $list-group-color: desaturate(lighten($body-color, 30%), 40%);
 
+// Reduce set of generated colors
+// Since I'm not using "success", "info", etc.,
+// this limits the amount of generated classes
+
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
 );
 
 // Merge the maps
+// Keep the Boostrap-specific colors ("primary", "secondary"),
+// but also generate utility classes for my custom palette
 $theme-colors: map-merge($theme-colors, $custom-colors);
