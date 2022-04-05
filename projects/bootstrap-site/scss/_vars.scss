@@ -9,12 +9,14 @@ $rose: #f4c2b4;
 $cinnamon: #b1624a;
 $coffee: #61301e;
 $cocoa: #34150a;
+$citron: #98982c;
 
 $custom-colors: (
   "rose": $rose,
   "cinnamon": $cinnamon,
   "coffee": $coffee,
   "cocoa": $cocoa,
+  "citron": $citron,
 );
 
 // -----------------------------------------------------------------------------
@@ -23,7 +25,11 @@ $custom-colors: (
 
 $primary: $coffee;
 $secondary: $rose;
+
 $link-color: $cinnamon;
+$headings-color: $citron;
+$body-color: $cocoa;
+$list-group-color: desaturate(lighten($body-color, 30%), 40%);
 
 $theme-colors: (
   "primary": $primary,
