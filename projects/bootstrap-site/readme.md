@@ -10,7 +10,7 @@ We're not using a package manager or command line utilities, so our setup is a l
 
 ### Download the latest version of Bootstrap
 
-At the time of writing, the latest version is 5.1.3 ([download .zip](https://github.com/twbs/bootstrap/archive/v5.1.3.zip)), but you can also visit the [Bootstrap Docs](https://getbootstrap.com/docs) and click the Download button in the header to jump to the right section.
+At the time of writing, the latest version is 5.1.3 ([download .zip](https://github.com/twbs/bootstrap/archive/v5.1.3.zip)), but you can also visit the [Bootstrap Docs](https://getbootstrap.com/docs) and click the Download button in the header to jump to the right section. You can also check the latest version number and download past versions on the [Versions](https://getbootstrap.com/docs/versions/) page.
 
 We're working with the **source files** so that we can modify Sass.
 
